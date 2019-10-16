@@ -25,7 +25,7 @@
 			<div class="col-md-4 col-sm-4 col-xs-12"></div>
 			<div class="col-md-4 col-sm-4 col-xs-12">
 				<form class="form-containter" action="add" method="post">
-					<h1>Login to nature!</h1>
+					<h1>Just log in!!</h1>
 					<div class="form-group">
 						<label for="exampleInputEmail1">Email address</label> <input
 							type="email" class="form-control" id="exampleInputEmail1"
