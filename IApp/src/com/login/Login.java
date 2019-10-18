@@ -13,18 +13,22 @@ public class Login extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 
-		Cookie cookie = new Cookie("root", password);
-		response.addCookie(cookie);
-
 		if (email.equals("andreea@gmail.com") && password.equals("root")) {
-			response.getWriter().println("^^ GOOD ");
+
+			// response.sendRedirect(request.getContextPath() + "/logged.jsp");
+
+			request.setAttribute("email", email);
+			request.getRequestDispatcher("logged.jsp").forward(request, response);
+
 		} else {
-			response.getWriter().println("good to know ");
+
+			response.sendRedirect(request.getContextPath() + "/login.jsp");
 		}
+
 	}
 
 }
