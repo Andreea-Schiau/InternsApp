@@ -19,8 +19,6 @@ public class Login extends HttpServlet {
 
 		if (email.equals("andreea@gmail.com") && password.equals("root")) {
 
-			// response.sendRedirect(request.getContextPath() + "/logged.jsp");
-
 			request.setAttribute("email", email);
 			request.getRequestDispatcher("logged.jsp").forward(request, response);
 
