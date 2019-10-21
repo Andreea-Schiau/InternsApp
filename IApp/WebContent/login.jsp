@@ -17,6 +17,9 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/shake.css" />
+<script src="js/jquery.js"></script>
+<script src="js/shake.js"></script>
 </head>
 <body>
 
@@ -25,25 +28,25 @@
 			<div class="col-md-4 col-sm-4 col-xs-12"></div>
 			<div class="col-md-4 col-sm-4 col-xs-12">
 				<div class="color">
-					<form class="form-containter" action="add" method="post">
+					<form class="form-containter usernameForm" action="add" method="post">
 						<h1>Login to internship!</h1>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Email address</label> <input
-								type="email" class="form-control" id="exampleInputEmail1"
-								aria-describedby="emailHelp" placeholder="Enter email"
-								name="email">
+								type="email" class="form-control input-lg" id="txtUsername"
+							aria-describedby="emailHelp" placeholder="Enter email"
+							name="email">
 						</div>
 						<div class="form-group">
 							<label for="exampleInputPassword1">Password</label> <input
-								type="password" class="form-control" id="exampleInputPassword1"
-								placeholder="Password" name="password">
+								type="password" class="form-control input-lg" id="txtPassword"
+							placeholder="Password" name="password">
 						</div>
 						<div class="form-group form-check">
 							<input type="checkbox" class="form-check-input"
 								id="exampleCheck1"> <label class="form-check-label"
 								for="exampleCheck1">Remember me</label>
 						</div>
-						<button type="submit" class="btn btn-success btn-block">Submit</button>
+						<button type="submit" class="btn btn-success btn-block" id="btnCheck">Submit</button>
 					</form>
 				</div>
 			</div>
