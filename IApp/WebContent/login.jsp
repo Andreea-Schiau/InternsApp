@@ -17,10 +17,6 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link href="css/global.css" href="text/css" rel="stylesheet">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" href="css/shake.css" />
-<script src="js/jquery.js"></script>
-<script src="js/shake.js"></script>
 </head>
 <body>
 
