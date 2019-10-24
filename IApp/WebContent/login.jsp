@@ -15,6 +15,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link href="css/global.css" href="text/css" rel="stylesheet">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -22,8 +23,8 @@
 
 	<div class="container-fluid bg">
 		<div class="row">
-			<div class="col-md-4 col-sm-4 col-xs-12"></div>
-			<div class="col-md-4 col-sm-4 col-xs-12">
+			<div class="col-lg-4 col-md-3 col-sm-4 col-xs-12"></div>
+			<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
 				<div class="color">
 					<form class="form-containter" action="add" method="post">
 						<h1>Login to internship!</h1>
@@ -50,4 +51,3 @@
 		</div>
 	</div>
 </body>
-</html>
