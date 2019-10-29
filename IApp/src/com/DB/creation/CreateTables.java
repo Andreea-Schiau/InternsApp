@@ -54,7 +54,7 @@ public class CreateTables {
 			stmt = conn.createStatement();
 
 			String sql = "CREATE TABLE if not exists Intern " + "(id INTEGER not NULL AUTO_INCREMENT, "
-					+ " git VARCHAR(255), "
+					+ " git VARCHAR(255), " + " image VARCHAR(255), " 
 					+ "PersonId INTEGER not NULL REFERENCES Person(id) ON DELETE CASCADE, PRIMARY KEY (id))";
 
 			stmt.executeUpdate(sql);

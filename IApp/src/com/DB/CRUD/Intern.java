@@ -20,9 +20,10 @@ public class Intern {
 			int id = result.getInt("id");
 			String git = result.getString("git");
 			String personId = result.getString("personId");
+			String image = result.getString("image");
 
 			String output = "Intern #%d: %s - %s - %s";
-			System.out.println(String.format(output, ++count,id,  git, personId));
+			System.out.println(String.format(output, ++count,id,  git, personId, image));
 		}
 	}
 }

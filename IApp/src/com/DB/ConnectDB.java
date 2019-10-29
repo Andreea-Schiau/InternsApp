@@ -36,21 +36,23 @@ public class ConnectDB {
 //				createDB.createDB(conn);
 
 //--------------Tables creation in DB--------------
-//				CreateTables table = new CreateTables();
+				CreateTables table = new CreateTables();
 //				table.User(conn);
 //				table.Person(conn);
 //				table.Holidays(conn);
-//				table.Intern(conn);
+				table.Intern(conn);
 //				table.Submodule(conn);
 //				table.Module(conn);
 				
 //--------------Tables creation in DB--------------
 //				Holidays holidays = new Holidays();
 //				holidays.getAll(conn);
-				Intern intern = new Intern();
-				intern.getAll(conn);
-				User userInternship = new User();
-				userInternship.getAll(conn);
+				
+//--------------crud-------------------------------
+//				Intern intern = new Intern();
+//				intern.getAll(conn);
+//				User userInternship = new User();
+//				userInternship.getAll(conn);
 				
 				System.out.println("Database connection success");
 			} catch (SQLException e) {
