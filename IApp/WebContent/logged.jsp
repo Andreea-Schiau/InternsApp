@@ -17,14 +17,18 @@
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
 	rel="stylesheet">
 <link href="css/global.css" href="text/css" rel="stylesheet">
+
 <title>Insert title here</title>
 </head>
+<%@ page import="java.io.PrintWriter"%>
+<%@page import="java.sql.*,java.util.*"%>
+
 <%
 	Object message = request.getAttribute("email");
 %>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand nav-item" href="#">Interns list</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarTogglerDemo02"
 			aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -34,12 +38,6 @@
 
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-				<li class="nav-item"><a class="nav-link disabled" href="#"
-					tabindex="-1" aria-disabled="true">Disabled</a></li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
 				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -50,6 +48,30 @@
 			</form>
 		</div>
 	</nav>
+	<%
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/internship", "root",
+					"root");
+			System.out.println("Database was Connected");
+			Statement students = connection.createStatement();
+			ResultSet rs = students.executeQuery("SELECT * FROM intern");
 
+			String users = "";
+			while (rs.next()) {
+				users = rs.getString("id");
+				System.out.print(users + "\n");
+			}
+			if (users.equals("")) {
+				System.out.println("Nu exista acest username");
+			}
+		} catch (Exception e) {
+			System.out.print(e);
+
+			Object idul = request.getAttribute("id");
+
+		}
+	%>
+	
 </body>
 </html>
