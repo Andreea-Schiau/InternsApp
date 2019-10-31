@@ -25,28 +25,32 @@
 			<div class="col-lg-4 col-md-3 col-sm-4 col-xs-12"></div>
 			<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
 				<div class="color">
-					<form class="form-containter usernameForm" action="add" method="post">
+					<form class="form-containter usernameForm" action="add"
+						method="post">
 						<h1>Login to internship!</h1>
-						<div class="form-group" >
+						<div class="form-group">
 							<label for="exampleInputEmail1">Email address</label> <input
 								type="email" class="form-control input-lg" id="txtUsername"
-							aria-describedby="emailHelp" placeholder="Enter email"
-							name="email">
+								aria-describedby="emailHelp" placeholder="Enter email"
+								name="email">
 						</div>
 						<div class="form-group">
 							<label for="exampleInputPassword1">Password</label> <input
 								type="password" class="form-control input-lg" id="txtPassword"
-							placeholder="Password" name="password">
+								placeholder="Password" name="password">
 						</div>
 						<div class="form-group form-check">
 							<input type="checkbox" class="form-check-input"
 								id="exampleCheck1"> <label class="form-check-label"
 								for="exampleCheck1">Remember me</label>
 						</div>
-						<button type="submit" class="btn btn-success btn-block" id="btnCheck">Submit</button>
+						<button type="submit" class="btn btn-success btn-block"
+							id="btnCheck">Submit</button>
 					</form>
 				</div>
 			</div>
+			
+			<a href="signUp.jsp" class="btn btn btn-default btn-lg btn-block">Sign up</a>
 		</div>
 	</div>
 </body>
