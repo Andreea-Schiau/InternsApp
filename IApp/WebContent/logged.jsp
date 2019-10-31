@@ -1,3 +1,4 @@
+<%@page import="com.DB.user.model.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -24,7 +25,7 @@
 <%@page import="java.sql.*,java.util.*"%>
 
 <%
-	Object message = request.getAttribute("email");
+	Object message = session.getAttribute("email");
 %>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -47,31 +48,6 @@
 				</ul>
 			</form>
 		</div>
-	</nav>
-	<%
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/internship", "root",
-					"root");
-			System.out.println("Database was Connected");
-			Statement students = connection.createStatement();
-			ResultSet rs = students.executeQuery("SELECT * FROM intern");
-
-			String users = "";
-			while (rs.next()) {
-				users = rs.getString("id");
-				System.out.print(users + "\n");
-			}
-			if (users.equals("")) {
-				System.out.println("Nu exista acest username");
-			}
-		} catch (Exception e) {
-			System.out.print(e);
-
-			Object idul = request.getAttribute("id");
-
-		}
-	%>
-	
+	</nav>	
 </body>
 </html>
