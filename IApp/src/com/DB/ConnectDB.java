@@ -4,10 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import com.DB.CRUD.Holidays;
-import com.DB.CRUD.Intern;
-import com.DB.CRUD.User;
-import com.DB.creation.CreateDB;
 import com.DB.creation.CreateTables;
 
 public class ConnectDB {
