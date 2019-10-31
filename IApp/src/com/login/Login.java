@@ -7,24 +7,41 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/Login")
 public class Login extends HttpServlet {
 
+	private static final long serialVersionUID = 1L;
+	
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+//		String email = request.getParameter("email");
+//		String password = request.getParameter("password");
+//
+//		if (email.equals("andreea@gmail.com") && password.equals("root")) {
+//
+//			request.setAttribute("email", email);
+//			request.getRequestDispatcher("logged.jsp").forward(request, response);
+//
+//		} else {
+//
+//			response.sendRedirect(request.getContextPath() + "/login.jsp");
+//		}
+		
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-
-		if (email.equals("andreea@gmail.com") && password.equals("root")) {
-
-			request.setAttribute("email", email);
-			request.getRequestDispatcher("logged.jsp").forward(request, response);
-
-		} else {
-
-			response.sendRedirect(request.getContextPath() + "/login.jsp");
+		
+		LoginDao dao = new LoginDao();
+		
+		if(dao.check(email, password)) {
+			HttpSession session = request.getSession();
+			session.setAttribute("email", email);
+			response.sendRedirect("logged.jsp");
+		}else {
+			response.sendRedirect("login.jsp");
 		}
 	}
 }
