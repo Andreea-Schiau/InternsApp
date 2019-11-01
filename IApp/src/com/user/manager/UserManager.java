@@ -2,9 +2,11 @@ package com.user.manager;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 
 import com.DB.CRUD.User;
 import com.DB.creation.DescriptionDB;
+import com.DB.user.model.User;
 import com.mysql.jdbc.Connection;
 
 public class UserManager {

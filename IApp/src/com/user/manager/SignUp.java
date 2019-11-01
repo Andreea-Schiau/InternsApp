@@ -13,7 +13,7 @@ import com.DB.dao.impl.UserDaoServiceImpl;
 import com.DB.model.User;
 
 @WebServlet("/SignUp")
-public class SignUp extends HttpServlet {
+public class SignUp extends HttpServlet{
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -22,13 +22,14 @@ public class SignUp extends HttpServlet {
 		String password = request.getParameter("password");
 		UserDaoServiceImpl userDaoImpl = new UserDaoServiceImpl();
 		User user = new User(email, password);
-
+		
 		if (userDaoImpl.insert(user)) {
 			HttpSession session = request.getSession();
 			session.setAttribute("email", email);
 			response.sendRedirect("logged.jsp");
-		} else {
+		}else {
 			response.sendRedirect("login.jsp");
 		}
 	}
 }
+
