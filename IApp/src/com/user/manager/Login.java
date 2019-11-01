@@ -1,4 +1,4 @@
-package com.login;
+package com.user.manager;
 
 import java.io.IOException;
 
@@ -17,15 +17,14 @@ import com.DB.user.model.User;
 public class Login extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	
-	
+		
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		
-		LoginDao dao = new LoginDao();
+		UserManager dao = new UserManager();
 		
 		if(dao.check(email, password)) {
 			HttpSession session = request.getSession();

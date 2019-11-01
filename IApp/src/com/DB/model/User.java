@@ -1,4 +1,4 @@
-package com.DB.user.model;
+package com.DB.model;
 
 public class User {
 
@@ -9,8 +9,7 @@ public class User {
 	public User() {
 	}
 
-	public User(int id, String email, String password) {
-		this.id = id;
+	public User(String email, String password) {
 		this.email = email;
 		this.password = password;
 	}

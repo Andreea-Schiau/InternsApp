@@ -1,4 +1,4 @@
-package com.DB;
+package com.main;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,8 +11,8 @@ import com.DB.CRUD.Holidays;
 import com.DB.CRUD.Intern;
 import com.DB.creation.CreateDB;
 import com.DB.creation.CreateTables;
-import com.DB.user.dao.UserDAO;
-import com.DB.user.model.User;
+import com.DB.dao.UserDAOService;
+import com.DB.model.User;
 
 public class ConnectDB {
 
@@ -23,13 +23,6 @@ public class ConnectDB {
 		
     	ApplicationContext context = 
         		new ClassPathXmlApplicationContext("Spring-Module.xml");
-    	
-    	UserDAO userDao = (UserDAO) context.getBean("userDAO");
-    	
-    	User user = new User();
-    	user.setEmail("test@yahoo.com");
-    	user.setPassword("shh");
-    	userDao.insert(user);
 	}
 
 	void createConnection() {
