@@ -1,3 +1,4 @@
+<%@page import="com.DB.model.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -17,14 +18,18 @@
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
 	rel="stylesheet">
 <link href="css/global.css" href="text/css" rel="stylesheet">
+
 <title>Insert title here</title>
 </head>
+<%@ page import="java.io.PrintWriter"%>
+<%@page import="java.sql.*,java.util.*"%>
+
 <%
-	Object message = request.getAttribute("email");
+	Object message = session.getAttribute("email");
 %>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand nav-item" href="#">Interns list</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarTogglerDemo02"
 			aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -34,12 +39,6 @@
 
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-				<li class="nav-item"><a class="nav-link disabled" href="#"
-					tabindex="-1" aria-disabled="true">Disabled</a></li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
 				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -49,7 +48,6 @@
 				</ul>
 			</form>
 		</div>
-	</nav>
-
+	</nav>	
 </body>
 </html>
