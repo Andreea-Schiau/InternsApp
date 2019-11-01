@@ -4,8 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+
 import javax.sql.DataSource;
 
+import com.DB.creation.DescriptionDB;
 import com.DB.user.dao.UserDAO;
 import com.DB.user.model.User;
 
@@ -53,18 +56,14 @@ public class JdbcUserDAO implements UserDAO {
 			ps.setInt(1, id);
 			User user = null;
 			ResultSet rs = ps.executeQuery();
-			if(rs.next()) {
-				user = new User(
-					rs.getInt("id"),
-					rs.getString("email"),
-					rs.getString("password")
-				);
+			if (rs.next()) {
+				user = new User(rs.getInt("id"), rs.getString("email"), rs.getString("password"));
 			}
-			
+
 			rs.close();
 			ps.close();
 			return user;
-		
+
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		} finally {

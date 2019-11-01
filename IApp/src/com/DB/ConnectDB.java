@@ -18,8 +18,8 @@ public class ConnectDB {
 
 	public static void main(String[] args) {
 
-		ConnectDB connDB = new ConnectDB();
-		connDB.createConnection();
+//		ConnectDB connDB = new ConnectDB();
+//		connDB.createConnection();
 		
     	ApplicationContext context = 
         		new ClassPathXmlApplicationContext("Spring-Module.xml");
@@ -45,7 +45,7 @@ public class ConnectDB {
 			try {
 				Connection conn = DriverManager.getConnection(db_url, user, pass);
 
-				createAll(conn);
+//				createAll(conn);
 
 				System.out.println("Database connection success");
 			} catch (SQLException e) {
