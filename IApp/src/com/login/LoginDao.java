@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import com.DB.CRUD.User;
 import com.DB.creation.DescriptionDB;
 import com.DB.user.model.User;
 import com.mysql.jdbc.Connection;
@@ -33,10 +34,8 @@ public class LoginDao {
 
 		DescriptionDB description = new DescriptionDB();
 		String sql = "INSERT INTO user (email, password) VALUES (?, ?)";
-
-		User user = new User();
-
-		try {
+		
+    try {
 			description.connection();
 			PreparedStatement st = description.conn.prepareStatement(sql);
 			st.setString(1, email);
@@ -47,9 +46,8 @@ public class LoginDao {
 				System.out.println("A new user was inserted successfully!");
 				return true;
 			}
-
-		} catch (Exception ex) {}
-
-		return false;
+		} catch (Exception ex) {
+		}
+  	return false;
 	}
 }

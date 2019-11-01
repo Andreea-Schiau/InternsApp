@@ -25,9 +25,9 @@
 			<div class="col-lg-4 col-md-3 col-sm-4 col-xs-12"></div>
 			<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
 				<div class="color">
-					<form class="form-containter usernameForm" action="add"
+					<form class="form-containter usernameForm" action="signUp"
 						method="post">
-						<h1>Login to internship!</h1>
+						<h1>Create an account</h1>
 						<div class="form-group">
 							<label for="exampleInputEmail1">Email address</label> <input
 								type="email" class="form-control input-lg" id="txtUsername"
@@ -49,8 +49,6 @@
 					</form>
 				</div>
 			</div>
-			<a href="SignUp.jsp" class="btn btn btn-default btn-lg btn-block">Sign
-				up</a>
 		</div>
 	</div>
 </body>

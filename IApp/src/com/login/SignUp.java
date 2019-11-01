@@ -13,7 +13,7 @@ import com.DB.user.model.User;
 
 @WebServlet("/SignUp")
 public class SignUp extends HttpServlet{
-	
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -28,10 +28,6 @@ public class SignUp extends HttpServlet{
 		}else {
 			response.sendRedirect("login.jsp");
 		}
-
-//		HttpSession session = request.getSession();
-//		session.setAttribute("user", user);
-
-//		response.sendRedirect("logged.jsp");
 	}
 }
+
